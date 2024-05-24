@@ -6,6 +6,7 @@ class Caeser {
     int verschiebung = 0;
     std::string verschlüsselterText = "";
     std::string entschlüsselterText = "";
+    std::string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
 
     std::string decrypt(){
         return "";
