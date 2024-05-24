@@ -1,22 +1,18 @@
 #include <iostream>
 
-// 
-/**
- * @brief Klasse um Texte, welche mit der Caeser-Verschlüsselung geschrieben wurde, zu entschlüssen und um Texte mit der Caeser-Verschlüsselung zu verschlüsseln.
- * 
- */
-
-using std::string;
+// Klasse um Texte, welche mit der Caeser-Verschlüsselung geschrieben wurde, zu entschlüssen.
+// Und um Texte mit der Caeser-Verschlüsselung zu Verschlüsseln.
 class Caeser {
     int verschiebung = 0;
-    string verschlüsselterText = "";
-    string entschlüsselterText = "";
+    std::string verschlüsselterText = "";
+    std::string entschlüsselterText = "";
+    std::string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
 
-    string decrypt(int shift, string cipher){
+    std::string decrypt(){
         return "";
     };
 
-    string encrypt(int key, string plain){
+    std::string encrypt(){
         return "";
     };
 };
