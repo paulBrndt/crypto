@@ -9,12 +9,12 @@
 using std::string;
 class Caeser {
     int verschiebung = 0;
-    std::string verschlüsselterText = "";
-    std::string entschlüsselterText = "";
-    std::string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+    string verschlüsselterText = "";
+    string entschlüsselterText = "";
+    string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
 
 
-    string decrypt(int shift, string cipher){
+    string decrypt(int key, string cipher){
         return "";
     };
 
