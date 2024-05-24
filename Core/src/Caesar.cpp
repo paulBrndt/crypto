@@ -1,10 +1,17 @@
 #include <iostream>
 
-class Caesar{
-public:
-    Caesar(int key) {
-        this->key = key;
+// Klasse um Texte, welche mit der Caeser-Verschlüsselung geschrieben wurde, zu entschlüssen.
+// Und um Texte mit der Caeser-Verschlüsselung zu Verschlüsseln.
+class Caeser {
+    int verschiebung = 0;
+    std::string verschlüsselterText = "";
+    std::string entschlüsselterText = "";
+
+    std::string decrypt(){
+        return "";
     };
-private:
-    int key = 0;
+
+    std::string encrypt(){
+        return "";
+    };
 };
