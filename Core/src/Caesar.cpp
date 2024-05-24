@@ -1,4 +1,6 @@
+#include<stdio.h>
 #include <iostream>
+#include <string.h>
 
 // 
 /**
@@ -8,13 +10,14 @@
 
 using std::string;
 class Caeser {
-    int verschiebung = 0;
-    string verschlüsselterText = "";
-    string entschlüsselterText = "";
     string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+    int i = 1;
 
 
     string decrypt(int key, string cipher){
+        do{
+            i + 1;
+        }while(i <= strlen(cipher));
         return "";
     };
 
