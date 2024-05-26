@@ -10,14 +10,14 @@
 
 using std::string;
 class Caeser {
-    string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+    const string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
     int i = 1;
 
 
     string decrypt(int key, string cipher){
-        do{
-            i + 1;
-        }while(i <= strlen(cipher));
+        // do{
+        //     i + 1;
+        // }while(i <= strlen(cipher));
         return "";
     };
 
