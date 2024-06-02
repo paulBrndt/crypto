@@ -1,0 +1,14 @@
+{
+  "name": "crypty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Das Eifrige Faultier",
+  "license": "ISC",
+  "description": ""
+}

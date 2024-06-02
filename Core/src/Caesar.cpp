@@ -1,6 +1,4 @@
-#include<stdio.h>
 #include <iostream>
-#include <string.h>
 
 // 
 /**
@@ -16,8 +14,9 @@ class Caeser {
 
     string decrypt(int key, string cipher){
         do{
+            alphabet.append(cipher[i]);
             i + 1;
-        }while(i <= strlen(cipher));
+        } while(i <= cipher.length());
         return "";
     };
 
