@@ -1,6 +1,8 @@
 
 function caeser(){
 
-const alphabet = "abcdefghijklmnopqrstuvwxyzäöüß"
+    const alphabet = "abcdefghijklmnopqrstuvwxyzäöüß"
+    function decrypt(key, cipher){
 
+    }
 }
