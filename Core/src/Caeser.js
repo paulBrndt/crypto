@@ -7,11 +7,12 @@
 
         for (let i=0; i<plain.length; i++){
             if (sonderzeichen.search(plain[i].small())){
-                
-            }
+
+            }else{
             let position = alphabet.search(plain[i].small())
             cipher += alphabet[(position + key) % alphabet.length]
         }
+      }
 
         return cipher
     }
