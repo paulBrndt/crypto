@@ -1,0 +1,24 @@
+{
+  "name": "crypty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests",
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "",
+    "start": "node app.js",
+    "poststart": "node tests/test.js"
+  },
+  "bin": {
+    "crypty": "index.js"
+  },
+  "author": "Das Eifrige Faultier",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
