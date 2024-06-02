@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "",
-    "start": "node index.js",
+    "start": "node app.js",
     "poststart": "node tests/test.js"
   },
   "bin": {
@@ -17,5 +17,8 @@
   },
   "author": "Das Eifrige Faultier",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
