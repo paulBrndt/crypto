@@ -1,9 +1,11 @@
 const alpha = "abcdefghijklmnopqrstuvwxyzäöüß"
 
+
 function caesarEncrypt(key, plain){
 
-    let cipher = ""
-    plain = plain.toLowerCase()
+    let cipher  = ""
+    plain       = plain.toLowerCase()
+    key         = key % alpha.length
 
     for (let i=0; i<plain.length; i++){
         const char = plain[i]
@@ -19,5 +21,6 @@ function caesarEncrypt(key, plain){
     return cipher
 }
 
-let cipher = caesarEncrypt(0,  "Zebras, das sind Tiere! 5 um genau zu sein.")
-console.log(cipher)
+
+
+module.exports = { caesarEncrypt }

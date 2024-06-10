@@ -17,7 +17,6 @@ app.use(express.json())
 app.use("/caesar", caesar)
 
 app.get("/", (req, res) => {
-    res.header(express.json)
     res.send(req.headers)
 })
 
