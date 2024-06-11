@@ -1,14 +1,7 @@
-from dotenv import load_dotenv
-import os
-import requests as req
+#Some Info
 
-class API:
-    def __init__(self):
-        load_dotenv()
-        self.api_key = os.getenv('CRYPTO_API_KEY')
-
-""" 
-API
+- structure
+    API
     - Methods
         Caesar
         Vigenere
@@ -25,4 +18,3 @@ API
         cipher
         method
     - 
-"""

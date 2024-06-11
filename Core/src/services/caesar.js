@@ -1,11 +1,11 @@
-const alpha = "abcdefghijklmnopqrstuvwxyzäöüß"
+const { standardAlphabet } = require('../models/alphabet');
 
+function caesarEncrypt(key, plain, alpha=standardAlphabet){
 
-function caesarEncrypt(key, plain){
 
     let cipher  = ""
     plain       = plain.toLowerCase()
-    key         = key % alpha.length
+    key         = (key + alpha.length) % alpha.length
 
     for (let i=0; i<plain.length; i++){
         const char = plain[i]
@@ -21,6 +21,20 @@ function caesarEncrypt(key, plain){
     return cipher
 }
 
+function caesarDecrypt(key, cipher, alpha=standardAlphabet){
+    return caesarEncrypt(-key, cipher, alpha)
+}
 
 
-module.exports = { caesarEncrypt }
+function caesarCrack(cipher, alpha=standardAlphabet){
+    let results = {}
+    for (let key=0; key<alpha.length; key++){
+        const plain = caesarEncrypt(-key, cipher, alpha)
+        results[key] = plain
+    }
+    return results
+}
+
+
+
+module.exports = { caesarEncrypt, caesarDecrypt, caesarCrack }
