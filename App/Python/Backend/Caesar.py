@@ -41,4 +41,12 @@ class Caesar:
         else:
             if error or self.stdError:
                 error("Please provide text") if error else self.stdError("Please provide text")
-                return result.json()
+            
+
+    def reversedEncrypt(self, plain: str, error=None) -> dict:
+        if plain:
+            result = req.get(f"{self.API_URL}/caesar/reversed_encrypt", json={'text': plain})
+            return result.json()
+        else:
+            if error or self.stdError:
+                error("Please provide text") if error else self.stdError("Please provide text")

@@ -1,4 +1,4 @@
-const { caesarEncrypt, caesarDecrypt, caesarCrack } = require('../services/caesar');
+const { caesarEncrypt, caesarDecrypt, caesarCrack, reversedCaesarEncrypt } = require('../services/caesar');
 
 const encrypt = (req, res) => {
     const { text, key } = req.body;
@@ -40,6 +40,16 @@ const rot13 = (req, res) => {
     return result
 }
 
+const reversedEncrypt = (req, res) => {
+    const { text, key } = req.body;
+    if (text === undefined || key === undefined) {
+        return res.status(400).json({ error: 'Please provide both text and key' });
+    }
+    const cipher = reversedCaesarEncrypt(key, text);
+    res.json({ cipher });
+    return cipher
+}
+
 
 const caesarController = (req, res) => {
     const { method } = req.body;
@@ -56,6 +66,8 @@ const caesarController = (req, res) => {
         return crack(req, res);
     } else if (method === 'rot13'){
         return rot13(req, res);
+    } else if (method ==='reversedEncrypt'){
+        return reversedEncrypt(req, res);
     } else {
         return res.status(400).json({ error: 'Invalid method. Please use encrypt, decrypt or crack' })
     }
@@ -64,4 +76,4 @@ const caesarController = (req, res) => {
 
 
 
-module.exports = { caesarController, decrypt, encrypt, crack, rot13 };
+module.exports = { caesarController, decrypt, encrypt, crack, rot13, reversedEncrypt };
