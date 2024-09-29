@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "",
     "start": "node app.js",
-    "poststart": "node tests/test.js"
+    "poststart": "node tests/test.js",
+    "dev": "nodemon server.js"
   },
   "bin": {
     "crypty": "index.js"
@@ -19,6 +20,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "compromise": "^14.13.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.2"
   }
 }
