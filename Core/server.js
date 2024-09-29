@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
+const path      = require("path")
 const express   = require('express');
-const dotenv    = require('dotenv').config();
+const envPath   = path.resolve(path.resolve(process.cwd(), ".."), ".env")
+require('dotenv').config({path: envPath});
 
 const caesar = require('./src/routes/caesarRoute');
 
@@ -18,10 +20,10 @@ app.use(express.json())
 app.use("/caesar", caesar)
 
 app.get("/", (req, res) => {
-    res.send(req.headers)
+    res.send("Hi there! ;)")
 })
 
 //Listen
 app.listen(port, hostname, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port} at host ${hostname}`);
 })

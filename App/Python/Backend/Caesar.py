@@ -9,7 +9,7 @@ class Caesar:
 
 
     def encrypt(self, key: int, plain: str, error=None) -> dict:
-        if plain or key != None:
+        if plain or key is not None:
             result = req.get(f"{self.API_URL}/caesar/encrypt", json={'key': key, 'text': plain})
             return result.json()
         else:
@@ -17,7 +17,7 @@ class Caesar:
                 error("Please provide both text and key") if error else self.stdError("Please provide both text and key")
     
     def decrypt(self, key: int, cipher: str, error=None) -> dict:
-        if cipher or key != None:
+        if cipher or key is not None:
             result = req.get(f"{self.API_URL}/caesar/decrypt", json={'key': key, 'text': cipher})
             return result.json()
         else:
