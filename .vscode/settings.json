@@ -129,7 +129,7 @@
             }
         ]
     },
-    "workbench.activityBar.location": "default",
+    "workbench.activityBar.location": "side",
     "workbench.sideBar.location": "left",
     "workbench.editor.closeOnFileDelete": true,
     "workbench.colorCustomizations": {
