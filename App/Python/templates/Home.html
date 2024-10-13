@@ -1,0 +1,98 @@
+<!nothing important!>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Crypto</title> <!name webapp!>
+
+
+    
+    <!js function, to update botton of the app!>
+
+    <script>
+
+        function showText() {
+
+            const selectElement = document.getElementById("options");
+            const outputDiv = document.getElementById("botton_text");
+            const extraInputDiv = document.getElementById("extraInput");
+            const selectedValue = selectElement.value;
+
+            if (selectedValue === "1") {
+                extraInputDiv.style.display = "block"; // Zeige das Eingabefeld
+                outputDiv.style.display = "none"        //Zeige den Text
+            } else if (selectedValue === "2") {
+                extraInputDiv.style.display = "none"; // Verstecke das Eingabefeld
+                outputDiv.style.display = "block"       //Zeige den Text
+            } else {
+                extraInputDiv.style.display = "none"; // Verstecke das Eingabefeld
+                outputDiv.style.display = "block"       //Zeige den Text
+            }
+        }
+
+    </script>
+
+
+</head>
+
+
+<body>
+
+
+ 
+<h1>Home</h1> <!</berschrifft!>
+Bitte alles erforderliche eingeben und ausfüllen. <br>
+
+<label for="fname">
+    First name:
+</label>
+
+<input type="text" id="fname" name="fname"> 
+
+
+
+
+
+<select id="options" onchange="showText()">
+
+    <option value="">
+        Bitte wählen...
+    </option>
+
+    <option value="1">
+        Caeser
+    </option>
+
+    <option value="2">
+        Option 2
+    </option>
+
+    <option value="3">
+        Option 3
+    </option>
+
+</select>
+
+
+
+
+<div id="botton_text" style="display: block;">
+please choose
+</div>
+
+
+
+<div id="extraInput" style="display: none;">
+    <label for="caesarInput">Bitte zusätzlichen Text für Caesar eingeben:</label>
+    <input type="text" id="caesarInput" name="caesarInput">
+</div>
+
+
+
+
+
+</body>
+</html>
