@@ -17,19 +17,39 @@
         function showText() {
 
             const selectElement = document.getElementById("options");
-            const outputDiv = document.getElementById("botton_text");
-            const extraInputDiv = document.getElementById("extraInput");
+            const outputDiv1 = document.getElementById("outputDiv1");
+            const outputDiv2 = document.getElementById("outputDiv2");
+            const outputDiv3 = document.getElementById("outputDiv3");
+            const pleaseChoose = document.getElementById("pleaseChoose");
             const selectedValue = selectElement.value;
 
             if (selectedValue === "1") {
-                extraInputDiv.style.display = "block"; // Zeige das Eingabefeld
-                outputDiv.style.display = "none"        //Zeige den Text
+                outputDiv1.style.display = "block"; 
+                outputDiv2.style.display = "none";
+                outputDiv3.style.display = "none";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
+
+                outputDiv.style.display = "none"       //Verstecke den Text
+
             } else if (selectedValue === "2") {
-                extraInputDiv.style.display = "none"; // Verstecke das Eingabefeld
-                outputDiv.style.display = "block"       //Zeige den Text
-            } else {
-                extraInputDiv.style.display = "none"; // Verstecke das Eingabefeld
-                outputDiv.style.display = "block"       //Zeige den Text
+                outputDiv1.style.display = "none"; 
+                outputDiv2.style.display = "block";
+                outputDiv3.style.display = "none";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
+
+                outputDiv.style.display = "none"       //Verstecke den Text
+
+            } else if (selectedValue == "3"){
+                outputDiv1.style.display = "none"; 
+                outputDiv2.style.display = "none";
+                outputDiv3.style.display = "block";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
+
+                outputDiv.style.display = "none"       //Verstecke den Text
+
+            }else{
+                outputDiv1.style.display = "none"; 
+                outputDiv2.style.display = "none";
+                outputDiv3.style.display = "none";        // Verstecke die falschen Dropdown Menüs
+
+                outputDiv.style.display = "block"        //Zeige den Text
             }
         }
 
@@ -47,12 +67,6 @@
 <h2>Hallo Paul!</h2>
 Bitte alles erforderliche eingeben und ausfüllen. <br>
 
-<label for="fname">
-    First name:
-</label>
-
-<input type="text" id="fname" name="fname"> 
-
 
 
 
@@ -64,15 +78,15 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
     </option>
 
     <option value="1">
-        Caeser
+        encript
     </option>
 
     <option value="2">
-        Option 2
+        decrypt
     </option>
 
     <option value="3">
-        Option 3
+        crack
     </option>
 
 </select>
@@ -80,15 +94,19 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 
 
 
-<div id="botton_text" style="display: block;">
-please choose
+<div id="pleaseChoose" style="display: block;" style="height: max-content;" style="width: max-content;">
+please choose, you idiot!
 </div>
 
 
 
-<div id="extraInput" style="display: none;">
-    <label for="caesarInput">Bitte zusätzlichen Text für Caesar eingeben:</label>
-    <input type="text" id="caesarInput" name="caesarInput">
+<div id="outputDiv1" style="display: none;">
+</div>
+
+<div id="outputDiv1" style="display: none;">
+</div>
+
+<div id="outputDiv1" style="display: none;">
 </div>
 
 
