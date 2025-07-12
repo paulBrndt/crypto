@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -6,8 +6,10 @@ app = Flask(__name__)
 @app.route('/home')
 def hello_world():
     #return "hi there"
-    return render_template('Home.html')
+    icon = url_for('static', filename='favicon.ico')
+    return render_template('Home.html', icon=icon)
 
 
-app.run("0.0.0.0", "8080")
+
+app.run("0.0.0.0", 8080)
 

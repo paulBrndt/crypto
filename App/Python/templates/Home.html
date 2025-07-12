@@ -1,20 +1,37 @@
 <!nothing important!>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-    <title>Crypto</title> <!name webapp!>
+    <!meta data!>
+    <!nothing important!>
+    <meta charset="utf-8" />
+
+    <!Image!>
+    <link rel="icon" href="{{ icon }}" />
+
+    <!nothing important!>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <!description!>
+    <meta
+      name="description"
+      content="Website for the encryption and decryption application"
+    />
+
+    <!webapp name!>
+    <title>Crypto</title>
 
 
-    
+
+
+
+
     <!js function, to update botton of the app!>
-
     <script>
 
         function showText() {
+        
 
             const selectElement = document.getElementById("options");
             const outputDiv1 = document.getElementById("outputDiv1");
@@ -28,7 +45,7 @@
                 outputDiv2.style.display = "none";
                 outputDiv3.style.display = "none";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
 
-                pleaseChoose.style.display = "none"       //Verstecke den Text
+                pleaseChoose.style.display = "none";       //Verstecke den Text
 
             } else if (selectedValue === "2") {
                 outputDiv1.style.display = "none"; 
@@ -52,19 +69,23 @@
                 pleaseChoose.style.display = "block"        //Zeige den Text
             }
         }
+        function encrypter() {
+            const selectElement = document.getElementById("encrypt");
+        }
+</script>
 
-    </script>
+
+
+
 
 
 </head>
-
-
 <body>
 
 
- 
-<h1>Home</h1> <!</überschrifft!>
-<h2>Hallo Paul!</h2>
+<!</überschrifften!>
+<h1>Home</h1>
+<h2>Hallo!</h2>
 Bitte alles erforderliche eingeben und ausfüllen. <br>
 
 
@@ -72,7 +93,7 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 
 
 <select id="options" onchange="showText()">
-
+    
     <option value="">
         Bitte wählen...
     </option>
@@ -93,20 +114,32 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 
 
 
-<div id="pleaseChoose" style="display: block;">
-please choose, you idiot!
+
+
+
+<div
+
+    <div id="pleaseChoose" style="display: block;">
+        please choose!
+    </div>
+
+    <div id="outputDiv1" style="display: none;">
+        <input id="encrypt" onchange="encrypter()">
+
+        </input>
+    </div>
+
+    <div id="outputDiv2" style="display: none;">
+
+    </div>
+
+    <div id="outputDiv3" style="display: none;">
+
+    </div>
+
 </div>
 
 
-
-<div id="outputDiv1" style="display: none;">
-</div>
-
-<div id="outputDiv1" style="display: none;">
-</div>
-
-<div id="outputDiv1" style="display: none;">
-</div>
 
 
 
