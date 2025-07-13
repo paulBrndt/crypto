@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <div>
     <!meta data!>
     <!nothing important!>
     <meta charset="utf-8" />
@@ -23,13 +24,9 @@
     <title>Crypto</title>
 
 
-
-
-
-
-    <!js function, to update botton of the app!>
+    </div>  
     <script>
-
+        //js function, to update botton of the app
         function showText() {
         
 
@@ -70,26 +67,22 @@
             }
         }
         function encrypter() {
-            const selectElement = document.getElementById("encrypt");
+            const selectElement1 = document.getElementById("encrypt");
+            const outputDiv3 = document.getElementById("outputDiv4");
+            const selectedValue1 = selectElement1.value;
+            console.log(selectedValue1)
         }
-</script>
-
-
-
-
-
-
+    </script>
 </head>
 <body>
 
 
+<div>
 <!</überschrifften!>
 <h1>Home</h1>
 <h2>Hallo!</h2>
 Bitte alles erforderliche eingeben und ausfüllen. <br>
-
-
-
+</div>
 
 
 <select id="options" onchange="showText()">
@@ -99,7 +92,7 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
     </option>
 
     <option value="1">
-        encript
+        encrypt
     </option>
 
     <option value="2">
@@ -113,36 +106,33 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 </select>
 
 
-
-
-
-
-<div
+<div>
 
     <div id="pleaseChoose" style="display: block;">
+       
         please choose!
+
     </div>
 
     <div id="outputDiv1" style="display: none;">
-        <input id="encrypt" onchange="encrypter()">
 
-        </input>
+        <input id="encrypt" onchange="encrypter()">
+        
     </div>
 
     <div id="outputDiv2" style="display: none;">
-
+        Hallo
     </div>
 
     <div id="outputDiv3" style="display: none;">
+        Hello
+    </div>
 
+    <div id="outputDiv4" style="display: none;">
+        Hi
     </div>
 
 </div>
-
-
-
-
-
 
 
 </body>
