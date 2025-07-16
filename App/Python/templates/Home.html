@@ -10,6 +10,8 @@
     <!Image!>
     <link rel="icon" href="{{ icon }}" />
 
+    <script src="{{ script }}"></script>
+
     <!nothing important!>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -25,54 +27,6 @@
 
 
     </div>  
-    <script>
-        //js function, to update botton of the app
-        function showText() {
-        
-
-            const selectElement = document.getElementById("options");
-            const outputDiv1 = document.getElementById("outputDiv1");
-            const outputDiv2 = document.getElementById("outputDiv2");
-            const outputDiv3 = document.getElementById("outputDiv3");
-            const pleaseChoose = document.getElementById("pleaseChoose");
-            const selectedValue = selectElement.value;
-
-            if (selectedValue === "1") {
-                outputDiv1.style.display = "block"; 
-                outputDiv2.style.display = "none";
-                outputDiv3.style.display = "none";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
-
-                pleaseChoose.style.display = "none";       //Verstecke den Text
-
-            } else if (selectedValue === "2") {
-                outputDiv1.style.display = "none"; 
-                outputDiv2.style.display = "block";
-                outputDiv3.style.display = "none";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
-
-                pleaseChoose.style.display = "none"       //Verstecke den Text
-
-            } else if (selectedValue == "3"){
-                outputDiv1.style.display = "none"; 
-                outputDiv2.style.display = "none";
-                outputDiv3.style.display = "block";      // Zeige das zugehörige Dropdown Menü und verstecke Falsche
-
-                pleaseChoose.style.display = "none"       //Verstecke den Text
-
-            }else{
-                outputDiv1.style.display = "none"; 
-                outputDiv2.style.display = "none";
-                outputDiv3.style.display = "none";        // Verstecke die falschen Dropdown Menüs
-
-                pleaseChoose.style.display = "block"        //Zeige den Text
-            }
-        }
-        function encrypter() {
-            const selectElement1 = document.getElementById("encrypt");
-            const outputDiv3 = document.getElementById("outputDiv4");
-            const selectedValue1 = selectElement1.value;
-            console.log(selectedValue1)
-        }
-    </script>
 </head>
 <body>
 
@@ -108,6 +62,12 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 
 <div>
 
+    <div id="pScript" style="display: none;">
+
+        <link rel="stylesheet" href="{{ c }}">
+        
+    </div>
+
     <div id="pleaseChoose" style="display: block;">
        
         please choose!
@@ -116,7 +76,7 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
 
     <div id="outputDiv1" style="display: none;">
 
-        <input id="encrypt" onchange="encrypter()">
+        <input id="encrypt" oninput="encrypter()">
         
     </div>
 
@@ -129,7 +89,7 @@ Bitte alles erforderliche eingeben und ausfüllen. <br>
     </div>
 
     <div id="outputDiv4" style="display: none;">
-        Hi
+        <!-- Hier wird das Ergebnis angezeigt -->
     </div>
 
 </div>

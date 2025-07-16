@@ -32,7 +32,7 @@ class Caesar:
         else:
             if error or self.stdError:
                 error("Please provide both text and key") if error else self.stdError("Please provide both text and key")
-
+        return {}
 
     def rot13(self, text: str, error=None) -> dict:
         if text:
@@ -41,7 +41,7 @@ class Caesar:
         else:
             if error or self.stdError:
                 error("Please provide text") if error else self.stdError("Please provide text")
-            
+        return {}
 
     def reversedEncrypt(self, plain: str, error=None) -> dict:
         if plain:
@@ -50,3 +50,4 @@ class Caesar:
         else:
             if error or self.stdError:
                 error("Please provide text") if error else self.stdError("Please provide text")
+        return {}

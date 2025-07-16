@@ -1,5 +1,5 @@
-from termcolor import colored
-
+def colored(txt, *args, **kwargs) -> str:
+    return txt
 print_disabled = False
 trace_disabled = True
 
