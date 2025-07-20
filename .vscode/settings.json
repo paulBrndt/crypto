@@ -1,6 +1,5 @@
 {
     "editor.inlineSuggest.suppressSuggestions": true,
-    "python.venvPath": "/Users/paulbrendtner/Desktop/Privat/Coding/Jarvis/Code/Python/.venv",
     "editor.fontSize": 16,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
