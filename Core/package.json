@@ -20,9 +20,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "compromise": "^14.13.0",
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "nodemon": "^3.1.2"
+    "compromise": "^14.14.4",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
   }
 }
