@@ -44,10 +44,21 @@ function encrypter() {
     const inputElement1 = document.getElementById("encrypt");
     const outputDiv4 = document.getElementById("outputDiv4");
     const inputValue1 = inputElement1.value;
-    const pScript = document.getElementById("pScript")
-            
-    pScript.style.display = "block"
-    outputDiv4.style.display = "block";
-    outputDiv4.innerHTML = "Hi!";
-    
+
+    fetch('/encrypt', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: inputValue1 })
+    })
+    .then(response => response.json())
+    .then(data => {
+        outputDiv4.style.display = "block";
+        outputDiv4.innerHTML = data.result;
+    })
+    .catch(error => {
+        outputDiv4.style.display = "block";
+        outputDiv4.innerHTML = "Fehler: " + error;
+    });
 }
